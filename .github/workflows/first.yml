@@ -1,16 +1,8 @@
-name: The first workflows
+name: The second workflows
 on: push
 jobs:
-    echo:
-        runs-on: ubuntu-latest
-        steps:
-            - run: echo 'Hello, Everyone'
-    pwd-ls:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print working directory
-              run: pwd
-            - name: list files
-              run: |
-                  cd ~
-                  ls -al
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list all
+        run: ls -al
